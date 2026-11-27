@@ -1,0 +1,305 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+:root {
+    --app-ink: #172554;
+    --app-muted: #64748b;
+    --app-line: #e5eaf2;
+    --app-primary: #3156d3;
+}
+
+body.app-body {
+    min-height: 100vh;
+    color: var(--app-ink);
+    background:
+        radial-gradient(ellipse at top left, rgba(219, 234, 254, 0.52), transparent 34rem),
+        #f5f7fb;
+}
+
+.app-navbar {
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid var(--app-line);
+    box-shadow: 0 0.25rem 1.25rem rgba(23, 37, 84, 0.04);
+    backdrop-filter: blur(12px);
+
+    .navbar-brand {
+        color: var(--app-ink);
+        font-size: 1.05rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+    }
+
+    .navbar-nav {
+        gap: 0.25rem;
+    }
+
+    .nav-link {
+        padding: 0.55rem 0.85rem;
+        color: var(--app-muted);
+        font-weight: 600;
+        transition: color 0.2s ease, background-color 0.2s ease;
+
+        &:hover,
+        &.active {
+            color: var(--app-primary);
+        }
+
+        &.active {
+            background: #eef2ff;
+            border-radius: 0.65rem;
+        }
+    }
+}
+
+.app-brand-icon,
+.app-user-icon {
+    display: inline-grid;
+    flex: 0 0 auto;
+    place-items: center;
+}
+
+.app-brand-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.75rem;
+    color: #fff;
+    background: linear-gradient(135deg, #2563eb, #5b5bd6);
+    box-shadow: 0 0.35rem 0.8rem rgba(49, 86, 211, 0.24);
+}
+
+.app-user-icon {
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    color: var(--app-primary);
+    background: #eef2ff;
+}
+
+.app-main {
+    min-height: calc(100vh - 9.5rem);
+}
+
+.app-panel {
+    border-color: var(--app-line);
+    border-radius: 1rem !important;
+    box-shadow: 0 1rem 2.5rem rgba(23, 37, 84, 0.08) !important;
+}
+
+.card-header.bg-primary {
+    background: linear-gradient(120deg, #2458d3 0%, #4756c8 55%, #654fc2 100%) !important;
+    border-bottom: 0;
+}
+
+.app-eyebrow {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.auth-panel {
+    max-width: 39rem;
+    margin-inline: auto;
+
+    .card-header.bg-primary {
+        padding: 1.5rem;
+    }
+
+    .form-label {
+        color: #334155;
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    .input-group-text {
+        min-width: 2.9rem;
+        justify-content: center;
+        color: var(--app-primary);
+        background: #f8faff;
+        border-color: #dce3ee;
+    }
+
+    .form-control {
+        border-color: #dce3ee;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+
+        &:focus {
+            border-color: #8ba5f5;
+            box-shadow: 0 0 0 0.22rem rgba(49, 86, 211, 0.12);
+        }
+    }
+}
+
+.auth-heading-icon {
+    display: inline-grid;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-bottom: 0.8rem;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 0.85rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.14);
+    font-size: 1.15rem;
+}
+
+.app-count-pill {
+    padding: 0.55rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 0.85rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.app-panel .btn {
+    border-radius: 0.65rem;
+    font-weight: 700;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+    }
+}
+
+.app-panel .btn-primary,
+.app-panel .btn-success {
+    box-shadow: 0 0.4rem 0.9rem rgba(49, 86, 211, 0.18);
+}
+
+.table {
+    --bs-table-bg: transparent;
+
+    thead th {
+        padding-top: 0.9rem;
+        padding-bottom: 0.9rem;
+        color: #475569;
+        background: #f1f5fb;
+        border-bottom: 1px solid var(--app-line);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    tbody td {
+        padding-top: 0.9rem;
+        padding-bottom: 0.9rem;
+        border-color: #edf1f6;
+        color: #475569;
+        vertical-align: middle;
+    }
+
+    tbody tr {
+        transition: background-color 0.18s ease;
+
+        &:hover {
+            --bs-table-bg: #f8faff;
+        }
+    }
+}
+
+.app-avatar-placeholder,
+.app-empty-icon {
+    display: inline-grid;
+    place-items: center;
+    color: #5270d8;
+    background: #eef2ff;
+}
+
+.app-avatar-placeholder {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.app-empty-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1.1rem;
+    font-size: 1.65rem;
+}
+
+.app-address {
+    min-width: 10rem;
+    max-width: 16rem;
+}
+
+.app-action-button {
+    width: 2.1rem;
+    height: 2.1rem;
+    display: inline-grid;
+    place-items: center;
+    padding: 0;
+}
+
+.app-form-card .form-label {
+    color: #334155;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.app-form-card .input-group-text {
+    min-width: 2.9rem;
+    justify-content: center;
+    border-color: #dce3ee;
+}
+
+.app-form-card .form-control,
+.app-form-card .form-select {
+    border-color: #dce3ee;
+    border-radius: 0.6rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+
+    &:focus {
+        border-color: #8ba5f5;
+        box-shadow: 0 0 0 0.22rem rgba(49, 86, 211, 0.12);
+    }
+}
+
+.app-form-card .input-group > .input-group-text:first-child {
+    border-radius: 0.6rem 0 0 0.6rem;
+}
+
+.app-form-card .input-group > .form-control,
+.app-form-card .input-group > .form-select {
+    border-radius: 0 0.6rem 0.6rem 0;
+}
+
+.app-footer {
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--app-line);
+    color: #8490a4;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 575.98px) {
+    .app-count-pill {
+        padding: 0.45rem 0.65rem;
+        font-size: 0.78rem;
+    }
+
+    .app-address {
+        min-width: 8rem;
+    }
+
+    .app-footer {
+        text-align: center;
+    }
+}
